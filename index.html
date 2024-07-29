@@ -12,8 +12,7 @@
         window.onload = function() {
             const redirectUrl = getQueryStringParameter('url');
             if (redirectUrl) {
-                await window.location.href = redirectUrl;
-                document.body.innerHTML = '<p>リダイレクト完了</p><p>Created by Reo Okawara</p>';
+                window.location.href = redirectUrl;
             } else {
                 document.body.innerHTML = '<p>リダイレクトURLが指定されていません。クエリ文字列「?url=your-target-url」をURLに追加してください。</p><p>Created by Reo Okawara</p>';
             }
