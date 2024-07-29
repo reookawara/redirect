@@ -13,6 +13,10 @@
             const redirectUrl = getQueryStringParameter('url');
             if (redirectUrl) {
                 window.location.href = redirectUrl;
+                setTimeout(function() {
+                    window.open('', '_self');
+                    window.close();
+                }, 1000);
             } else {
                 document.body.innerHTML = '<p>リダイレクトURLが指定されていません。クエリ文字列「?url=your-target-url」をURLに追加してください。</p><p>Created by Reo Okawara</p>';
             }
