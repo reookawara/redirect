@@ -13,7 +13,9 @@
             const redirectUrl = getQueryStringParameter('url');
             if (redirectUrl) {
                 window.location.href = redirectUrl;
-                window.close();
+                setTimeout(function() {
+                    window.close();
+                }, 3000);
             } else {
                 document.body.innerHTML = '<p>リダイレクトURLが指定されていません。クエリ文字列「?url=your-target-url」をURLに追加してください。</p><p>Created by Reo Okawara</p>';
             }
@@ -21,7 +23,7 @@
     </script>
 </head>
 <body>
-    <p>リダイレクト中...</p>
+    <p>リダイレクト中... (3秒後に自動で閉じます)</p>
     <p>Created by Reo Okawara</p>
 </body>
 </html>
